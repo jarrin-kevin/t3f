@@ -647,7 +647,7 @@ def random_matrix(shape, tt_rank=2, mean=0., stddev=1.,
 
   num_dims = shape[0].size
   if tt_rank.size == 1:
-    tt_rank = tt_rank * np.ones(num_dims - 1, dtype=np.int)
+    tt_rank = tt_rank * np.ones(num_dims - 1, dtype=int)
     tt_rank = np.concatenate([[1], tt_rank, [1]])
 
   tt_rank = tt_rank.astype(int)
