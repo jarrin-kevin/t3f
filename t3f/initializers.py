@@ -84,7 +84,7 @@ def tensor_ones(shape, dtype=tf.float32, name='t3f_tensor_ones'):
   shape = np.array(shape)
   _validate_input_parameters(is_tensor=True, shape=shape)
   num_dims = shape.size
-  tt_rank = np.ones(num_dims + 1, dtype=np.int)
+  tt_rank = np.ones(num_dims + 1, dtype=int)
 
   with tf.name_scope(name):
     tt_cores = num_dims * [None]
